@@ -2,6 +2,6 @@
 
 namespace application\defaults\model;
 
-class IndexModel extends \core\lib\YXDModel {
+class IndexModel extends \core\base\YXDModel {
 
 }

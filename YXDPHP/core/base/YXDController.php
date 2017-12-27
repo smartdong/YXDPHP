@@ -1,6 +1,6 @@
 <?php
 
-namespace core\lib;
+namespace core\base;
 
 class YXDController {
 

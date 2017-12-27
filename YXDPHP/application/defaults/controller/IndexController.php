@@ -2,7 +2,7 @@
 
 namespace application\defaults\controller;
 
-class IndexController extends \core\lib\YXDController {
+class IndexController extends \core\base\YXDController {
 
     public function index() {
         $this->display('index.php');
