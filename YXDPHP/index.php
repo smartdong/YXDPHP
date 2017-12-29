@@ -14,6 +14,8 @@ define('DEBUG', true);
 
 date_default_timezone_set('PRC');
 
+include 'vendor'.DIRECTORY_SEPARATOR.'autoload.php';
+
 if (DEBUG) {
     ini_set('display_errors',1);
 } else {
