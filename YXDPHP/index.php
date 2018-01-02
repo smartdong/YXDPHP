@@ -14,6 +14,9 @@ define('DEBUG', true);
 
 date_default_timezone_set('PRC');
 
+include CORE_PATH.DIRECTORY_SEPARATOR.'common'.DIRECTORY_SEPARATOR.'CommonFunction.php';
+include CORE_PATH.DIRECTORY_SEPARATOR.'YXDPHP.php';
+
 include 'vendor'.DIRECTORY_SEPARATOR.'autoload.php';
 
 if (DEBUG) {
@@ -21,9 +24,6 @@ if (DEBUG) {
 } else {
     ini_set('display_errors',0);
 }
-
-include CORE_PATH.DIRECTORY_SEPARATOR.'common'.DIRECTORY_SEPARATOR.'CommonFunction.php';
-include CORE_PATH.DIRECTORY_SEPARATOR.'YXDPHP.php';
 
 spl_autoload_register('\core\YXDPHP::load');
 

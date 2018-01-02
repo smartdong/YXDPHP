@@ -2,6 +2,7 @@
 
 namespace core;
 
+use \core\lib\Log;
 use \core\lib\Route;
 
 class YXDPHP {
@@ -16,6 +17,7 @@ class YXDPHP {
     }
 
     public static function run() {
+        Log::init();
         Route::route();
 
         $controllerFile = Route::$controllerFile;
