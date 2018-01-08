@@ -4,14 +4,20 @@ namespace core\base;
 
 class YXDController {
 
-    public $controllerPath;
+    public $option;
+
+    public $path;
     public $viewPath;
+
     public $assign = [];
 
-    public function __construct($controllerPath = false) {
-        if ($controllerPath) {
-            $this->controllerPath = $controllerPath;
-            $this->viewPath = rtrim($controllerPath,'controller').'view';
+    public function __construct($option = []) {
+
+        $this->option = $option;
+        $this->path = $option['path'];
+
+        if ($this->path) {
+            $this->viewPath = rtrim($this->path,'controller').'view';
         }
     }
 

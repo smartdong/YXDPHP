@@ -25,7 +25,11 @@ class YXDPHP {
         $action = Route::$action;
 
         include_once "$controllerFile";
-        $c = new $controllerClass(Route::$controllerPath);
+
+        $option = [];
+        $option['path'] = Route::$controllerPath;
+
+        $c = new $controllerClass($option);
         $c->$action();
     }
 }
